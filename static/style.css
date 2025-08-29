@@ -1,0 +1,223 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Gliker';
+    src: local('Gliker SemiBold'), local('Gliker-SemiBold'),
+        url('fontes/Gliker-SemiBold.woff2') format('woff2'),
+        url('fontes/Gliker-SemiBold.woff') format('woff'),
+        url('fontes/Gliker-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+:root{
+    --cor-fundo: #F5F0E6;
+    --cor-titulos: #8B5E3C;
+    --cor-botoes: #3EBFD3;
+    --cor-destaques: #FF7F50;
+    --cor-neutra: #FFFFFF;
+}
+
+.body_menu {
+    background-color: var(--cor-neutra);
+    margin: 0;
+}
+
+img {
+    max-width: 200px;
+    margin-bottom: 5px; /* espaço reduzido */
+}
+
+.main_menu {
+    background-color: var(--cor-fundo);
+    text-align: center;
+    height: 100vh;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    gap: 20px;
+}
+
+.title_menu{
+    font-family: 'Gliker', sans-serif;
+    color: var(--cor-titulos);
+    padding-top: 0px;
+    font-size: 50px;
+}
+
+.subtitle_menu {
+    font-family: 'Gliker', sans-serif;
+    font-size: 16px;        
+    font-weight: 300;        
+    color: #8B5E3C;          
+    opacity: 0.7;            
+    margin: 0 0 20px 0; /* sem espaço acima */
+    letter-spacing: 0.3px;   
+    line-height: 1.2;
+}
+
+#botoes_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 30px;
+}
+
+.botao_menu{
+    background-color: var(--cor-botoes);
+    color: white;
+    font-weight: bolder;
+    border-radius: 40px;
+    font-size: 22px;
+    padding: 20px 25px;
+    width: 100%;
+    border: 0px;
+    transition: all 0.3s ease;
+}
+
+.botao_menu:hover{
+    box-shadow: 0 0 5px #1f5f69;
+    transform: translateY(-2px);
+}
+
+
+/*aqui termina o menu e começa o login*/
+
+.body_login {
+    background-color: var(--cor-neutra);
+    margin: 0;
+}
+
+.main_login {
+    background-color: var(--cor-fundo);
+    text-align: center;
+    height: 100vh;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    border-radius: 15px;
+    gap: 20px;
+}
+
+.title_login {
+    font-family: 'Gliker', sans-serif;
+    color: var(--cor-titulos);
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+#form_login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+}
+
+#form_login input {
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+
+#form_login input:focus {
+    border-color: var(--cor-botoes);
+}
+
+.botao_login {
+    background-color: var(--cor-botoes);
+    color: white;
+    font-weight: bolder;
+    border-radius: 40px;
+    font-size: 20px;
+    padding: 15px;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao_login:hover {
+    box-shadow: 0 0 5px #1f5f69;
+    transform: translateY(-2px);
+}
+
+.link_cadastro {
+    font-size: 14px;
+    color: #555;
+}
+
+.link_cadastro a {
+    color: var(--cor-botoes);
+    text-decoration: none;
+}
+
+.link_cadastro a:hover {
+    text-decoration: underline;
+}
+
+/*aqui termina o login e começa o cadastro*/
+
+#form_cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+}
+
+#form_cadastro input {
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+
+#form_cadastro input:focus {
+    border-color: var(--cor-botoes);
+}
+
+.botao_cadastro {
+    background-color: var(--cor-botoes);
+    color: white;
+    font-weight: bolder;
+    border-radius: 40px;
+    font-size: 20px;
+    padding: 15px;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao_cadastro:hover {
+    box-shadow: 0 0 5px #1f5f69;
+    transform: translateY(-2px);
+}
+
+.link_login {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.link_login a {
+    color: var(--cor-botoes);
+    text-decoration: none;
+}
+
+.link_login a:hover {
+    text-decoration: underline;
+}

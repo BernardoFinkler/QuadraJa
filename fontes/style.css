@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Gliker';
+    src: local('Gliker SemiBold'), local('Gliker-SemiBold'),
+        url('Gliker-SemiBold.woff2') format('woff2'),
+        url('Gliker-SemiBold.woff') format('woff'),
+        url('Gliker-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
