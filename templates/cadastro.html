@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro_QuadraJá</title>
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos/style.css') }}">
 </head>
 <body class="body_login">
     <main class="main_login">
-        <img src="imagens/Logo_QuadraJá.png" alt="logotipo QuadraJá">
+        <img src="{{ url_for('static', filename='imagens/Logo_QuadraJá.png') }}" alt="logotipo QuadraJá">
 
         <h1 class="title_login">Cadastro</h1>
 
-<form id="form_cadastro" method="post" action="/cadastro">
+        <form id="form_cadastro" method="post" action="{{ url_for('cadastro') }}">
     <input type="text" name="nome" placeholder="Nome completo" required>
     <input type="email" name="email" placeholder="E-mail" required>
+    
     <input type="password" name="senha" placeholder="Senha" required>
     <input type="password" name="confirmar_senha" placeholder="Confirmar senha" required>
+
+    {% if erro %}
+        <p style="color:red; font-size:0.9rem; margin-top:5px;">{{ erro }}</p>
+    {% endif %}
+
     <button type="submit" class="botao_cadastro">Criar Conta</button>
 </form>
 
-<p class="link_login">Já tem conta? <a href="login.html">Faça login aqui</a></p>
 
+        <p class="link_login">Já tem conta? <a href="{{ url_for('login') }}">Faça login aqui</a></p>
     </main>
 </body>
 </html>

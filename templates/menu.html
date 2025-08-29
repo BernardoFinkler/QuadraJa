@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu_QuadraJá</title>
-    <link rel="stylesheet" href="static/style.css">
+    <title>Menu QuadraJá</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos/style.css') }}">
 </head>
 <body class="body_menu">
     <main class="main_menu">
-        <img src="imagens/Logo_QuadraJá.png" alt="logotipo QuadraJá">
+        <img src="{{ url_for('static', filename='imagens/Logo_QuadraJá.png') }}" alt="logotipo QuadraJá">
         <h2 class="subtitle_menu">Reserve sua quadra com facilidade</h2>
 
         <div id="botoes_menu">
-            <button class="botao_menu" onclick="location.href='login.html'">Login</button>
-            <button class="botao_menu" onclick="location.href='cadastro.html'">Criar Conta</button>
+            <a href="{{ url_for('login') }}"><button class="botao_menu">Login</button></a>
+            <a href="{{ url_for('cadastro') }}"><button class="botao_menu">Criar Conta</button></a>
         </div>
     </main>
 </body>
