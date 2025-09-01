@@ -49,18 +49,21 @@ def cadastro():
 # Login
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    erro =  None
+    erro = None
     if request.method == 'POST':
         email = request.form['email']
         senha = request.form['senha']
 
-        usuario = Usuario.query.filter_by(email=email, senha=senha).first()
-        if usuario:
-            return f"Bem-vindo, {usuario.nome}!"
+        usuario = Usuario.query.filter_by(email=email).first()  # Primeiro busca só pelo email
+        if not usuario:
+            erro = "E-mail não cadastrado. Crie uma conta primeiro."
+        elif usuario.senha != senha:
+            erro = "Senha incorreta!"
         else:
-            erro = "E-mail ou senha incorretos!"
+            return f"Bem-vindo, {usuario.nome}!"
 
     return render_template('login.html', erro=erro)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
+
