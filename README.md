@@ -49,22 +49,21 @@ flask-wtf
 
 Estrutura de pastas
 
+```text
 /QuadraJa
-│
-├── app.py                 # Arquivo principal do Flask
-├── requirements.txt       # Dependências do projeto
-├── README.txt             # Documentação do projeto
-│
-├── templates/             # Templates HTML
-│   ├── menu.html
-│   ├── cadastro.html
-│   └── login.html
-│
-└── static/                # Arquivos estáticos
-    ├── estilos/
-    │   └── style.css
-    └── imagens/
-        └── Logo_QuadraJá.png
+├── app.py # Arquivo principal do Flask
+├── requirements.txt # Dependências do projeto
+├── README.md # Documentação do projeto
+├── templates/ # Templates HTML
+│ ├── menu.html
+│ ├── cadastro.html
+│ └── login.html
+└── static/ # Arquivos estáticos
+├── estilos/
+│ └── style.css
+└── imagens/
+└── Logo_QuadraJá.png
+```
 
 ---
 
