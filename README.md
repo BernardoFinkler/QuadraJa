@@ -1,6 +1,6 @@
 QuadraJá
 
-Aplicação web em Flask para gerenciamento de login, cadastro de usuários e navegação básica por páginas. O projeto é totalmente pessoal.
+Aplicação web em Flask para gerenciamento de aluguel de quadras. O projeto é totalmente pessoal.
 
 ---
 
