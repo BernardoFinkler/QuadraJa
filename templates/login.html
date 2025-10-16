@@ -10,14 +10,16 @@
     <main class="main_login">
         <img src="{{ url_for('static', filename='imagens/Logo_QuadraJá.png') }}" alt="logotipo QuadraJá">
 
-        <h1 class="title_login">Login</h1>
+        <!-- <h1 class="title_login">Login</h1> -->
 
         {% if erro %}
             <p style="color:red; text-align:center;">{{ erro }}</p>
         {% endif %}
 
         <form id="form_login" method="post" action="{{ url_for('login') }}">
-            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="email" name="email" placeholder="E-mail" required
+                oninvalid="this.setCustomValidity('Por favor, insira um e-mail válido')"
+                oninput="this.setCustomValidity('')">
             <input type="password" name="senha" placeholder="Senha" required>
             <button type="submit" class="botao_login">Entrar</button>
         </form>
