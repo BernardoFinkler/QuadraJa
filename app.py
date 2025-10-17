@@ -54,15 +54,22 @@ def login():
         email = request.form['email']
         senha = request.form['senha']
 
-        usuario = Usuario.query.filter_by(email=email).first()  # Primeiro busca só pelo email
+        usuario = Usuario.query.filter_by(email=email).first()
         if not usuario:
             erro = "E-mail não cadastrado. Crie uma conta primeiro."
         elif usuario.senha != senha:
             erro = "Senha incorreta!"
         else:
-            return f"Bem-vindo, {usuario.nome}!"
+
+            return redirect(url_for('locais')) 
 
     return render_template('login.html', erro=erro)
+
+# locais
+@app.route('/locais')
+def locais():
+    # Aqui você deve carregar os dados reais dos locais parceiros do banco de dados no futuro.
+    return render_template('locais.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)

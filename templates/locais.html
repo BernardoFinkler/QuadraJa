@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locais Parceiros - QuadraJá</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos/style.css') }}">
+    <style>
+        /* Estes estilos serão movidos para o style.css no próximo passo */
+        .locais_container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 350px; /* Um pouco mais largo que o main_menu */
+            margin-top: 20px;
+        }
+
+        .local_card {
+            display: flex;
+            align-items: center;
+            background-color: var(--cor-neutra); /* Branco */
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .local_card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .local_card img {
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+            /* A imagem do design é uma bola, mas você pode usar a sua 'QuadraJá.png' ou um ícone de quadra */
+        }
+
+        .local_info {
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .local_nome {
+            font-family: 'Gliker', sans-serif;
+            color: var(--cor-titulos);
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .link_horarios {
+            display: inline-block;
+            background-color: var(--cor-botoes);
+            color: var(--cor-neutra);
+            font-size: 12px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 20px;
+            text-decoration: none;
+            margin-top: 5px;
+            transition: background-color 0.2s;
+        }
+
+        .link_horarios:hover {
+            background-color: #319fb0; /* Tom mais escuro do botão */
+        }
+
+        /* Footer de Navegação */
+        .footer_nav {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 400px; /* Limite igual ao main_menu */
+            background-color: var(--cor-titulos); /* Cor Marrom */
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-around;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .footer_nav a {
+            color: var(--cor-fundo); /* Cor de Fundo do main_menu */
+            font-size: 24px;
+            padding: 5px 10px;
+        }
+
+        /* Estilo para a bolinha de navegação atual */
+        .footer_nav a.active {
+            color: var(--cor-botoes); /* Cor de Destaque */
+        }
+
+        /* Ícone de Quadra (representando a página atual, como no seu design) */
+        .icon-quadra {
+            /* Simula o ícone de quadra no footer do seu design */
+            background-color: var(--cor-fundo);
+            color: var(--cor-titulos);
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body class="body_menu"> <main class="main_menu" style="justify-content: flex-start; padding-top: 50px; height: auto; min-height: 100vh; padding-bottom: 80px;">
+        <h1 class="title_menu" style="font-size: 36px; margin-bottom: 0;">Locais Parceiros</h1>
+        
+        <p class="subtitle_menu" style="opacity: 1; margin-bottom: 30px;">
+            Escolha um espaço para reservar:
+        </p>
+
+        <div class="locais_container">
+            <div class="local_card">
+                <img src="{{ url_for('static', filename='imagens/bola_beach.png') }}" alt="Ícone de Vôlei de Praia">
+                <div class="local_info">
+                    <p class="local_nome">Espaço Beach</p>
+                    <a href="#" class="link_horarios">Ver Horários</a>
+                </div>
+            </div>
+
+            <div class="local_card">
+                <img src="{{ url_for('static', filename='imagens/bola_beach.png') }}" alt="Ícone de Vôlei de Praia">
+                <div class="local_info">
+                    <p class="local_nome">Summer</p>
+                    <a href="#" class="link_horarios">Ver Horários</a>
+                </div>
+            </div>
+
+            <div class="local_card">
+                <img src="{{ url_for('static', filename='imagens/bola_beach.png') }}" alt="Ícone de Vôlei de Praia">
+                <div class="local_info">
+                    <p class="local_nome">Costeiro</p>
+                    <a href="#" class="link_horarios">Ver Horários</a>
+                </div>
+            </div>
+
+            </div>
+    </main>
+
+    <footer class="footer_nav">
+        <a href="#"><span style="font-size: 20px;">⚙️</span></a> 
+        
+        <a href="#" class="active"><span class="icon-quadra" style="font-size: 20px;">🏟️</span></a> 
+        
+        <a href="#"><span style="font-size: 20px;">👤</span></a> 
+    </footer>
+</body>
+</html>
